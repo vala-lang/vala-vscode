@@ -8,6 +8,7 @@
         "name": "Jeremy Philippe",
         "email": "jeremy.philippe@gmail.com"
     },
+    "license": "MIT",
     "engines": {
         "vscode": "^1.36.0"
     },
