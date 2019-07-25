@@ -4,7 +4,7 @@
 
 ---
 
-![screenshot](screenshots/screen1.png)
+![screenshot](images/screen1.png)
 
 ---
 
