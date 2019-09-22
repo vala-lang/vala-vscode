@@ -1,10 +1,8 @@
-name: Vala
-scopeName: source.vala
+name: Genie
+scopeName: source.genie
 fileTypes:
-  - vala
-  - vapi
   - gs
-uuid: 5fbc8212-3c2f-45ac-83d2-0c9195878913
+uuid: b1e902c2-7248-400a-a6e6-666f250eadb1
 
 patterns:
     - include: '#code'
@@ -81,7 +79,7 @@ repository:
   keywords:
     patterns:
       - name: keyword.vala
-        match: '(?<=^|[^@\w\.])(as|do|if|in|is|for|get|new|out|ref|set|try|var|base|case|else|enum|lock|null|this|true|void|weak|async|break|catch|class|const|false|owned|throw|using|while|yield|delete|extern|inline|params|public|return|sealed|signal|sizeof|static|struct|switch|throws|typeof|unlock|default|dynamic|ensures|finally|foreach|private|unowned|virtual|abstract|continue|delegate|internal|override|requires|volatile|construct|interface|namespace|protected|errordomain)\b'
+        match: '(?<=^|[^@\w\.])(as|do|if|in|is|of|or|to|and|def|for|get|isa|new|not|out|ref|set|try|var|case|dict|else|enum|init|list|lock|null|pass|prop|self|true|uses|void|weak|when|array|async|break|class|const|event|false|final|owned|print|super|raise|while|yield|assert|delete|downto|except|extern|inline|params|public|raises|return|sealed|sizeof|static|struct|typeof|default|dynamic|ensures|finally|private|unowned|virtual|abstract|continue|delegate|internal|override|readonly|requires|volatile|construct|errordomain|interface|namespace|protected|implements)\b'
       - name: keyword.vala
         match: '(?<=^|[^@\w\.])(bool|double|float|unichar|char|uchar|int|uint|long|ulong|short|ushort|size_t|ssize_t|string|void|signal|int8|int16|int32|int64|uint8|uint16|uint32|uint64)\b'
       - name: keyword.vala

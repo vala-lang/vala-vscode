@@ -233,13 +233,7 @@
             <key>name</key>
             <string>keyword.vala</string>
             <key>match</key>
-            <string>(?&lt;=^|[^@\w\.])(if|else|switch|case|default|do|while|for|foreach|in|break|continue|return|try|catch|finally|throw|lock|class|interface|struct|enum|delegate|errordomain|const|weak|unowned|dynamic|abstract|virtual|override|signal|extern|static|async|inline|new|public|private|protected|internal|out|ref|throws|requires|ensures|namespace|using|as|is|in|new|delete|sizeof|typeof|this|base|null|true|false|get|set|construct|default|construct|void|var|yield|global|owned)\b</string>
-          </dict>
-          <dict>
-            <key>name</key>
-            <string>keyword.vala</string>
-            <key>match</key>
-            <string>(?&lt;=^|[^@\w\.])(def|init|final|self|super|array|of|isa|not|exception)\b</string>
+            <string>(?&lt;=^|[^@\w\.])(as|do|if|in|is|for|get|new|out|ref|set|try|var|base|case|else|enum|lock|null|this|true|void|weak|async|break|catch|class|const|false|owned|throw|using|while|yield|delete|extern|inline|params|public|return|sealed|signal|sizeof|static|struct|switch|throws|typeof|unlock|default|dynamic|ensures|finally|foreach|private|unowned|virtual|abstract|continue|delegate|internal|override|requires|volatile|construct|interface|namespace|protected|errordomain)\b</string>
           </dict>
           <dict>
             <key>name</key>
@@ -281,7 +275,7 @@
             <key>name</key>
             <string>entity.name.function.vala</string>
             <key>match</key>
-            <string>(\w+)(?=\s*(&lt;.*)?\()</string>
+            <string>(\w+)(?=\s*(&lt;[\s\w.]+&gt;\s*)?\()</string>
           </dict>
         </array>
       </dict>
