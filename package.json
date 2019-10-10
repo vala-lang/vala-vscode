@@ -1,62 +1,62 @@
 {
-    "name": "vala-grammar",
-    "displayName": "Vala Grammar",
-    "description": "Syntax highlighting for the Vala / Genie languages",
-    "version": "1.0.4",
-    "publisher": "philippejer",
-    "author": {
-        "name": "Jeremy Philippe",
-        "email": "jeremy.philippe@gmail.com"
-    },
-    "license": "MIT",
-    "engines": {
-        "vscode": "^1.36.0"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/philippejer/vala-grammar.git"
-    },
-    "categories": [
-        "Programming Languages"
-    ],
-    "icon": "images/vala.png",
-    "contributes": {
-        "languages": [
-            {
-                "id": "vala",
-                "aliases": [
-                    "Vala",
-                    "vala"
-                ],
-                "extensions": [
-                    ".vala",
-                    ".vapi"
-                ],
-                "configuration": "./language-configuration-vala.json"
-            },
-            {
-                "id": "genie",
-                "aliases": [
-                    "Genie",
-                    "genie"
-                ],
-                "extensions": [
-                    ".gs"
-                ],
-                "configuration": "./language-configuration-genie.json"
-            }
+  "name": "vala-grammar",
+  "displayName": "Vala Grammar",
+  "description": "Syntax highlighting for the Vala / Genie languages",
+  "version": "1.0.4",
+  "publisher": "philippejer",
+  "author": {
+    "name": "Jeremy Philippe",
+    "email": "jeremy.philippe@gmail.com"
+  },
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.36.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/philippejer/vala-grammar.git"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "icon": "images/vala.png",
+  "contributes": {
+    "languages": [
+      {
+        "id": "vala",
+        "aliases": [
+          "Vala",
+          "vala"
         ],
-        "grammars": [
-            {
-                "language": "vala",
-                "scopeName": "source.vala",
-                "path": "./syntaxes/vala.tmLanguage"
-            },
-            {
-                "language": "genie",
-                "scopeName": "source.genie",
-                "path": "./syntaxes/genie.tmLanguage"
-            }
-        ]
-    }
+        "extensions": [
+          ".vala",
+          ".vapi"
+        ],
+        "configuration": "./language-configuration-vala.json"
+      },
+      {
+        "id": "genie",
+        "aliases": [
+          "Genie",
+          "genie"
+        ],
+        "extensions": [
+          ".gs"
+        ],
+        "configuration": "./language-configuration-genie.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "vala",
+        "scopeName": "source.vala",
+        "path": "./syntaxes/vala.tmLanguage"
+      },
+      {
+        "language": "genie",
+        "scopeName": "source.genie",
+        "path": "./syntaxes/genie.tmLanguage"
+      }
+    ]
+  }
 }
