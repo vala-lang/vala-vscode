@@ -62,7 +62,7 @@ repository:
       - name: constant.character.escape.vala
         match: '\$\w+'
       - name: constant.character.escape.vala
-        match: '\$\(([^)(]+|\(([^)(]+|\([^)(]*\))*\))*\)'
+        match: '\$\(([^)(]|\(([^)(]|\([^)]*\))*\))*\)'
     - name: string.quoted.double.vala
       begin: '"'
       end: '"'

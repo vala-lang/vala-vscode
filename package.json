@@ -2,7 +2,7 @@
   "name": "vala-grammar",
   "displayName": "Vala Grammar",
   "description": "Syntax highlighting for the Vala / Genie languages",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "publisher": "philippejer",
   "author": {
     "name": "Jeremy Philippe",

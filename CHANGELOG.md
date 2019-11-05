@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.0.5
+- Fix possible IDE slowdown/freeze with interpolated strings containing nested parentheses (!)
+
 ## 1.0.4
 - Separate Vala/Genie grammars (different keywords)
 - Keywords extracted directly from the compiler source (0.46)

@@ -177,7 +177,7 @@
                 <key>name</key>
                 <string>constant.character.escape.vala</string>
                 <key>match</key>
-                <string>\$\(([^)(]+|\(([^)(]+|\([^)(]*\))*\))*\)</string>
+                <string>\$\(([^)(]|\(([^)(]|\([^)]*\))*\))*\)</string>
               </dict>
             </array>
           </dict>
