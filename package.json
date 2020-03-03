@@ -90,13 +90,13 @@
     ]
   },
   "dependencies": {
-    "vscode-languageclient": "^5.2.1"
+    "vscode-languageclient": "^5.2.1",
+    "which": "^2.0.2"
   },
   "devDependencies": {
     "@types/node": "^10.12.12",
     "@types/vscode": "^1.34.0",
     "typescript": "^3.2.2",
-    "which": "^2.0.2",
     "@types/which": "^1.3.2"
   },
   "scripts": {
