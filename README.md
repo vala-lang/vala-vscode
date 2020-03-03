@@ -1,4 +1,4 @@
-# vala-vscode
+# vala-vscode - Vala support for Visual Studio Code
 
 ## Syntax highlighting and code intelligence for the Vala / Genie languages
 
@@ -8,7 +8,7 @@
 
 ---
 
-This extension is based off of the`vala-code` extension by T. Abreu (https://github.com/thiagoabreu) and the `vala-grammar` extension by Jereme Philippe (https://github.com/philippejer/vala-grammar).
+This extension is based off of the `vala-code` extension by T. Abreu (https://github.com/thiagoabreu) and the `vala-grammar` extension by Jereme Philippe (https://github.com/philippejer/vala-grammar).
 
 ## How to edit the rules
 
