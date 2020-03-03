@@ -1,1 +1,8 @@
+# Ignore extension packages
 *.vsix
+
+# Ignore npm packages
+node_modules/
+
+# Ignore generated code
+out/

@@ -1,6 +1,6 @@
-# Vala Grammar
+# vala-vscode
 
-## Syntax highlighting for the Vala / Genie languages
+## Syntax highlighting and code intelligence for the Vala / Genie languages
 
 ---
 
@@ -8,19 +8,7 @@
 
 ---
 
-This extension started as a fork of the `vala-code` extension by T. Abreu (https://github.com/thiagoabreu).
-
-However, in trying to improve the rules, I have found myself removing most of the complex hierarchical parsing rules to keep only a handful of basic stateless rules.
-
-So the grammar rules are extremely simple but work well in practice for both Vala and Genie (the YAML grammar is ~100 lines vs. ~3000 lines for the typescript one).
-
-The price to pay for this simplicity is that the the code should follow these (very common) naming conventions:
-
-- Types are either `snake_case` (only for built-in types) or `PascalCase` (classes, structs, enums and errors).
-- Variables, fields and methods are `snake_case`.
-- Constants are `UPPER_SNAKE_CASE`.
-
-Also, while the grammar works fine with the default VSCode theme (Dark+), it is very coarse grained so it might not work as well with a more complex theme.
+This extension is based off of the`vala-code` extension by T. Abreu (https://github.com/thiagoabreu) and the `vala-grammar` extension by Jereme Philippe (https://github.com/philippejer/vala-grammar).
 
 ## How to edit the rules
 
