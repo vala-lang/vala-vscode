@@ -4,11 +4,13 @@
 
 ---
 
-![screenshot](images/screen1.png)
+![screenshot](images/vls-vscode.png)
 
 ---
 
 This extension is based off of the `vala-code` extension by T. Abreu (https://github.com/thiagoabreu) and the `vala-grammar` extension by Jereme Philippe (https://github.com/philippejer/vala-grammar).
+
+**NOTE**: in order to get code intelligence, you must install the Vala Language Server (https://github.com/benwaffle/vala-language-server).
 
 ## How to edit the rules
 
