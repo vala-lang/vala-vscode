@@ -87,7 +87,18 @@
       {
         "language": "vala"
       }
-    ]
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "Vala / Genie Settings",
+      "properties": {
+	"vls.languageServerPath": {
+	  "type": "string",
+	  "description": "Binary name or path to language server",
+	  "default": ""
+	}
+      }
+    }
   },
   "dependencies": {
     "vscode-languageclient": "^5.2.1",
