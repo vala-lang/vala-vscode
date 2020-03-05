@@ -2,7 +2,7 @@
   "name": "vala",
   "displayName": "Vala",
   "description": "Syntax highlighting and language support for the Vala / Genie languages",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "publisher": "prince781",
   "author": {
     "name": "Princeton Ferro",
@@ -92,11 +92,11 @@
       "type": "object",
       "title": "Vala / Genie Settings",
       "properties": {
-	"vls.languageServerPath": {
-	  "type": "string",
-	  "description": "Binary name or path to language server",
-	  "default": ""
-	}
+        "vls.languageServerPath": {
+          "type": "string",
+          "description": "Binary name or path to language server",
+          "default": ""
+        }
       }
     }
   },
