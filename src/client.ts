@@ -62,7 +62,8 @@ export class ValaLanguageClient {
         }
         return workspace.getConfiguration('vls', uri).languageServerPath
              || which.sync('vala-language-server', { nothrow: true })
-             || which.sync('gvls', { nothrow: true })
+             || which.sync('org.gnome.gvls.stdio.Server', { nothrow: true })
+             || which.sync('gvls', { nothrow: true })   // for legacy GVLS
     }
 
     dispose() {
