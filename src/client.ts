@@ -40,15 +40,14 @@ export class ValaLanguageClient {
                 options: {
                     env: {
                         ...process.env,
-                        G_MESSAGES_DEBUG: 'all',
-                        JSONRPC_DEBUG: 1
+                        G_MESSAGES_DEBUG: 'all'
                     }
                 },
                 transport: TransportKind.stdio
             }
         };
 
-        this.ls = new LanguageClient('Vala Language Server', serverOptions, clientOptions)
+        this.ls = new LanguageClient('vala', 'Vala Language Server', serverOptions, clientOptions)
 
         this.ls.start()
     }
