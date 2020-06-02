@@ -30,18 +30,35 @@ export class ValaLanguageClient {
             revealOutputChannelOn: RevealOutputChannelOn.Info
         };
 
+        // default environment in non-debug mode
+        let runEnvironment = { ...process.env };
+        let uri;
+        if (window.activeTextEditor)
+            uri = window.activeTextEditor.document.uri;
+        else
+            uri = null;
+        
+        let workspaceConfiguration = workspace.getConfiguration('vls', uri);
+
+        if (workspaceConfiguration.debugMode)
+            runEnvironment['G_MESSAGES_DEBUG'] = 'all';
+        if (workspaceConfiguration.failOnCriticals)
+            runEnvironment['G_DEBUG'] = 'fatal-criticals';
+
         let serverOptions: ServerOptions = {
             run: {
                 command: serverModule,
-                transport: TransportKind.stdio
+                transport: TransportKind.stdio,
+                options: {
+                    env: runEnvironment
+                }
             },
             debug: {
                 command: serverModule,
                 options: {
                     env: {
                         ...process.env,
-                        G_MESSAGES_DEBUG: 'all',
-                        JSONRPC_DEBUG: 1
+                        G_MESSAGES_DEBUG: 'all'
                     }
                 },
                 transport: TransportKind.stdio

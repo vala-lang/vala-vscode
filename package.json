@@ -2,7 +2,7 @@
   "name": "vala",
   "displayName": "Vala",
   "description": "Syntax highlighting and language support for the Vala / Genie languages",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "publisher": "prince781",
   "author": {
     "name": "Princeton Ferro",
@@ -96,6 +96,16 @@
           "type": "string",
           "description": "Binary name or path to language server",
           "default": ""
+        },
+        "vls.debugMode": {
+          "type": "boolean",
+          "description": "Whether to start the server in debug mode (`G_MESSAGES_DEBUG=all`)",
+          "default": false
+        },
+        "vls.failOnCriticals": {
+          "type": "boolean",
+          "description": "Whether the server should fail on GLib critical messages (`G_DEBUG=fatal-criticals`)",
+          "default": false
         }
       }
     }
