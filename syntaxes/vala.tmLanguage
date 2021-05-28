@@ -233,19 +233,19 @@
             <key>name</key>
             <string>keyword.vala</string>
             <key>match</key>
-            <string>(?&lt;=^|[^@\w\.])(as|do|if|in|is|for|get|new|out|ref|set|try|var|base|case|else|enum|lock|null|this|true|void|weak|async|break|catch|class|const|false|owned|throw|using|while|yield|delete|extern|inline|params|public|return|sealed|signal|sizeof|static|struct|switch|throws|typeof|unlock|default|dynamic|ensures|finally|foreach|private|unowned|virtual|abstract|continue|delegate|internal|override|requires|volatile|construct|interface|namespace|protected|errordomain)\b</string>
+            <string>(?&lt;=^|[^@\w\.])(as|do|if|in|is|not|or|and|for|get|new|out|ref|set|try|var|base|case|else|enum|lock|null|this|true|void|weak|async|break|catch|class|const|false|owned|throw|using|while|with|yield|delete|extern|inline|params|public|return|sealed|signal|sizeof|static|struct|switch|throws|typeof|unlock|default|dynamic|ensures|finally|foreach|private|unowned|virtual|abstract|continue|delegate|internal|override|requires|volatile|construct|interface|namespace|protected|errordomain)\b</string>
           </dict>
           <dict>
             <key>name</key>
             <string>keyword.vala</string>
             <key>match</key>
-            <string>(?&lt;=^|[^@\w\.])(bool|double|float|unichar|char|uchar|int|uint|long|ulong|short|ushort|size_t|ssize_t|string|void|signal|int8|int16|int32|int64|uint8|uint16|uint32|uint64)\b</string>
+            <string>(?&lt;=^|[^@\w\.])(bool|double|float|unichar|unichar2|char|uchar|int|uint|long|ulong|short|ushort|size_t|ssize_t|string|string16|string32|void|signal|int8|int16|int32|int64|uint8|uint16|uint32|uint64|va_list|time_t)\b</string>
           </dict>
           <dict>
             <key>name</key>
             <string>keyword.vala</string>
             <key>match</key>
-            <string>(#if|#else|#endif)</string>
+            <string>(#if|#elif|#else|#endif)</string>
           </dict>
         </array>
       </dict>
@@ -257,7 +257,7 @@
             <key>name</key>
             <string>storage.type.primitive.vala</string>
             <key>match</key>
-            <string>(?&lt;=^|[^@\w\.])(bool|double|float|unichar|char|uchar|int|uint|long|ulong|short|ushort|size_t|ssize_t|string|void|signal|int8|int16|int32|int64|uint8|uint16|uint32|uint64)\b</string>
+            <string>(?&lt;=^|[^@\w\.])(bool|double|float|unichar|unichar2|char|uchar|int|uint|long|ulong|short|ushort|size_t|ssize_t|string|string16|string32|void|signal|int8|int16|int32|int64|uint8|uint16|uint32|uint64|va_list|time_t)\b</string>
           </dict>
           <dict>
             <key>name</key>

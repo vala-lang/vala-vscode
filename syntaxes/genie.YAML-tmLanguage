@@ -83,7 +83,7 @@ repository:
       - name: keyword.vala
         match: '(?<=^|[^@\w\.])(bool|double|float|unichar|char|uchar|int|uint|long|ulong|short|ushort|size_t|ssize_t|string|void|signal|int8|int16|int32|int64|uint8|uint16|uint32|uint64)\b'
       - name: keyword.vala
-        match: '(#if|#else|#endif)'
+        match: '(#if|#elif|#else|#endif)'
 
   types:
     patterns:

@@ -243,7 +243,7 @@
             <key>name</key>
             <string>keyword.vala</string>
             <key>match</key>
-            <string>(#if|#else|#endif)</string>
+            <string>(#if|#elif|#else|#endif)</string>
           </dict>
         </array>
       </dict>
