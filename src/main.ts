@@ -1,7 +1,7 @@
 import * as path from 'path'
 import { spawn } from 'child_process'
 
-import { ExtensionContext, languages, IndentAction } from 'vscode'
+import { ExtensionContext, languages, IndentAction, commands } from 'vscode'
 
 import { ValaLanguageClient } from './client'
 
