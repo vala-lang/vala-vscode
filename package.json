@@ -22,7 +22,8 @@
   "icon": "images/vala.png",
   "main": "./out/main.js",
   "activationEvents": [
-    "onLanguage:vala"
+    "onLanguage:vala",
+    "onLanguage:genie"
   ],
   "contributes": {
     "languages": [
