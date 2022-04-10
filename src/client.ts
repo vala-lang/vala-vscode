@@ -1,13 +1,12 @@
+// import LSP types
+import * as lsp from 'vscode-languageclient/node';
 import {
     LanguageClient,
     LanguageClientOptions,
-    ServerOptions,
-    TransportKind,
     RevealOutputChannelOn,
-} from 'vscode-languageclient';
-
-// import LSP types
-import * as lsp from 'vscode-languageclient';
+    ServerOptions,
+    TransportKind
+} from 'vscode-languageclient/node';
 
 import {
     ExtensionContext,
@@ -29,8 +28,7 @@ export class ValaLanguageClient {
     ls: LanguageClient | null = null
 
     constructor(context: ExtensionContext) {
-
-        let serverModule = this.getLanguageServerPath()
+        let serverModule = ValaLanguageClient.getLanguageServerPath()
 
         if (serverModule == null)
             return;
@@ -75,15 +73,15 @@ export class ValaLanguageClient {
             }
         };
 
-        this.ls = new LanguageClient('Vala Language Server', serverOptions, clientOptions)
+        this.ls = new LanguageClient('Vala Language Server', serverOptions, clientOptions);
 
         commands.registerTextEditorCommand('vala.showBaseSymbol', this.peekSymbol);
         commands.registerTextEditorCommand('vala.showHiddenSymbol', this.peekSymbol);
 
-        this.ls.start()
+        this.ls.start();
     }
 
-    getLanguageServerPath(): string | null {
+    static getLanguageServerPath(): string | null {
         let uri;
         if (window.activeTextEditor) {
             uri = window.activeTextEditor.document.uri;

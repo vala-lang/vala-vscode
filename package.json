@@ -2,7 +2,7 @@
   "name": "vala",
   "displayName": "Vala",
   "description": "Syntax highlighting and language support for the Vala / Genie languages",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "publisher": "prince781",
   "author": {
     "name": "Princeton Ferro",
@@ -10,7 +10,7 @@
   },
   "license": "MIT",
   "engines": {
-    "vscode": "^1.36.0"
+    "vscode": "^1.65.0"
   },
   "repository": {
     "type": "git",
@@ -112,12 +112,12 @@
     }
   },
   "dependencies": {
-    "vscode-languageclient": "^5.2.1",
+    "vscode-languageclient": "^7.1.0-next.1",
     "which": "^2.0.2"
   },
   "devDependencies": {
     "@types/node": "^10.12.12",
-    "@types/vscode": "^1.34.0",
+    "@types/vscode": "^1.65.0",
     "typescript": "^3.2.2",
     "@types/which": "^1.3.2"
   },
