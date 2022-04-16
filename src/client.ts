@@ -18,17 +18,21 @@ import {
     Uri,
     Location,
     Position,
-    Range
+    Range,
+    WorkspaceConfiguration
 } from 'vscode'
 
 import * as which from 'which'
 
 export class ValaLanguageClient {
 
+    config: WorkspaceConfiguration
+
     ls: LanguageClient | null = null
 
-    constructor(context: ExtensionContext) {
-        let serverModule = ValaLanguageClient.getLanguageServerPath()
+    constructor(_context: ExtensionContext) {
+        this.config = workspace.getConfiguration('vala', window.activeTextEditor?.document.uri);
+        let serverModule = this.languageServerPath;
 
         if (serverModule == null)
             return;
@@ -40,17 +44,10 @@ export class ValaLanguageClient {
 
         // default environment in non-debug mode
         let runEnvironment = { ...process.env };
-        let uri;
-        if (window.activeTextEditor)
-            uri = window.activeTextEditor.document.uri;
-        else
-            uri = null;
         
-        let workspaceConfiguration = workspace.getConfiguration('vls', uri);
-
-        if (workspaceConfiguration.debugMode)
+        if (this.config.debugMode)
             runEnvironment['G_MESSAGES_DEBUG'] = 'all';
-        if (workspaceConfiguration.failOnCriticals)
+        if (this.config.failOnCriticals)
             runEnvironment['G_DEBUG'] = 'fatal-criticals';
 
         let serverOptions: ServerOptions = {
@@ -81,20 +78,14 @@ export class ValaLanguageClient {
         this.ls.start();
     }
 
-    static getLanguageServerPath(): string | null {
-        let uri;
-        if (window.activeTextEditor) {
-            uri = window.activeTextEditor.document.uri;
-        } else {
-            uri = null;
-        }
-        return workspace.getConfiguration('vls', uri).languageServerPath
+    get languageServerPath(): string | null {
+        return this.config.languageServerPath
              || which.sync('vala-language-server', { nothrow: true })
              || which.sync('org.gnome.gvls.stdio.Server', { nothrow: true })
              || which.sync('gvls', { nothrow: true })   // for legacy GVLS
     }
 
-    peekSymbol(editor: TextEditor, edit: TextEditorEdit, lspCurrentLocation: lsp.Location, lspTargetLocation: lsp.Location): void {
+    peekSymbol(_editor: TextEditor, _edit: TextEditorEdit, lspCurrentLocation: lsp.Location, lspTargetLocation: lsp.Location): void {
         let currentLocation = new Location(
             Uri.parse(lspCurrentLocation.uri),
             new Range(
