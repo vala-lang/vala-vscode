@@ -2,7 +2,7 @@
   "name": "vala",
   "displayName": "Vala",
   "description": "Syntax highlighting and language support for the Vala / Genie languages",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "publisher": "prince781",
   "author": {
     "name": "Princeton Ferro",
@@ -112,7 +112,7 @@
     }
   },
   "dependencies": {
-    "vscode-languageclient": "^7.1.0-next.1",
+    "vscode-languageclient": "8.0.0-next.14",
     "which": "^2.0.2"
   },
   "devDependencies": {

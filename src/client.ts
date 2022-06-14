@@ -5,7 +5,7 @@ import {
     LanguageClientOptions,
     RevealOutputChannelOn,
     ServerOptions,
-    TransportKind
+    Executable
 } from 'vscode-languageclient/node';
 
 import {
@@ -50,24 +50,24 @@ export class ValaLanguageClient {
         if (this.config.failOnCriticals)
             runEnvironment['G_DEBUG'] = 'fatal-criticals';
 
-        let serverOptions: ServerOptions = {
-            run: {
-                command: serverModule,
-                transport: TransportKind.stdio,
-                options: {
-                    env: runEnvironment
-                }
-            },
-            debug: {
-                command: serverModule,
-                options: {
-                    env: {
-                        ...process.env,
-                        G_MESSAGES_DEBUG: 'all'
-                    }
-                },
-                transport: TransportKind.stdio
+        let runExe: Executable = {
+            command: serverModule,
+            options: {
+                env: runEnvironment
             }
+        };
+        let debugExe: Executable = {
+            command: serverModule,
+            options: {
+                env: {
+                    ...process.env,
+                    G_MESSAGES_DEBUG: 'all'
+                }
+            }
+        };
+        let serverOptions: ServerOptions = {
+            run: runExe,
+            debug: debugExe
         };
 
         this.ls = new LanguageClient('Vala Language Server', serverOptions, clientOptions);
