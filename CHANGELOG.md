@@ -1,5 +1,8 @@
 # Changelog
 
+## 1.1.0
+- Allow `${workspaceFolder}` in `vala.languageServerPath` configuration
+
 ## 1.0.4
 - Updated grammars
 
