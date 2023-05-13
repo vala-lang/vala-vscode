@@ -24,6 +24,19 @@ import {
 
 import * as which from 'which'
 
+const VarRegex = new RegExp(/\$\{(\w+)\}/g);
+function substituteVSCodeVariableInString(val: string): string {
+    return val.replace(VarRegex, (substring: string, varName) => {
+        if (varName === "workspaceFolder") {
+            const folders = workspace.workspaceFolders ?? [];
+            if (folders.length >= 1) {
+                return folders[0].uri.fsPath;
+            }
+        }
+        return substring;
+    });
+}
+
 export class ValaLanguageClient {
 
     config: WorkspaceConfiguration
@@ -79,7 +92,7 @@ export class ValaLanguageClient {
     }
 
     get languageServerPath(): string | null {
-        return this.config.languageServerPath
+        return substituteVSCodeVariableInString(this.config.languageServerPath)
              || which.sync('vala-language-server', { nothrow: true })
              || which.sync('org.gnome.gvls.stdio.Server', { nothrow: true })
              || which.sync('gvls', { nothrow: true })   // for legacy GVLS
