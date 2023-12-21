@@ -83,7 +83,7 @@ export class ValaLanguageClient {
             debug: debugExe
         };
 
-        this.ls = new LanguageClient('Vala Language Server', serverOptions, clientOptions);
+        this.ls = new LanguageClient('vala-language-server', 'Vala Language Server', serverOptions, clientOptions);
 
         commands.registerTextEditorCommand('vala.showBaseSymbol', this.peekSymbol);
         commands.registerTextEditorCommand('vala.showHiddenSymbol', this.peekSymbol);
