@@ -119,7 +119,7 @@
     "@types/node": "^10.12.12",
     "@types/vscode": "^1.66.0",
     "@types/which": "^1.3.2",
-    "esbuild": "^0.14.36",
+    "esbuild": "^0.28.1",
     "typescript": "^3.2.2"
   },
   "scripts": {
